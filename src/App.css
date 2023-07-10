@@ -1,0 +1,644 @@
+/* CSS Reset */
+
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Global Elements*/
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+}    
+
+*, *:before,*:after {
+    box-sizing: inherit;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: white;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 6px;
+}
+
+/* Header Elements*/
+
+.header {
+    padding: 2em 8em;
+    display: flex;
+    position: fixed;
+    width: 100%;
+}
+
+#logo {
+    animation: FadeIn 3s;
+}
+
+#logo img {
+    max-width: 100%;
+    width: 4em;
+    transition: height 0.5s ease-out;
+}
+
+#logo img:hover {
+    transform: scale(0.98);
+}
+
+/* Navigation Elements */
+
+nav {
+    font-size: 14px;
+}
+
+.nav-bar {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: var(--lightest-slate);
+    font-family: var(--font-mono);
+    counter-reset: item 0;
+}
+
+.nav-list {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.nav-list ol {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.nav-list ol li {
+    margin: 0px 1em;
+    position: relative;
+    counter-increment: item 1;
+    font-size: var(--fz-xs);
+}
+
+/* Body & Main Elements */
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 8em;
+    animation: transitionIn 3s;
+}
+
+main p {
+    line-height: 1.5em;
+}
+
+section {
+    margin: 0 30%;
+    padding: 1em 0;
+    align-content: center;
+}
+
+.introh1 {
+    font-size: 4em;
+}
+
+/* Links */
+
+a {
+    color: #000;
+    text-decoration: none;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+a p:hover, li a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    border: 2px solid #000;
+    background-color: #000;
+    border-radius: 6px;
+    color: #fff;
+    margin: 1em 0;
+    opacity: 1;
+    transition: 0.3s;
+    padding: 0.75em 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    transform: scale(0.98);
+}
+
+.btn-mobile-only {
+    display: none;
+    border: 2px solid #000;
+    background-color: #000;
+    border-radius: 6px;
+    color: #fff;
+    margin: 1em 0;
+    opacity: 1;
+    transition: 0.3s;
+    padding: 0.75em 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-mobile-only:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    transform: scale(0.98);
+}
+
+/* Video Elements */
+
+video {
+    border: 1.5px solid #000;
+    border-radius: 6px;
+}
+
+#videoPlay {
+    opacity: 0.6;
+    transition: 0.3s;
+    margin-top: 2em;
+}
+
+#videoPlay:hover {
+    opacity: 1;
+}
+
+.video-container {
+    display: flex;
+    margin: 1em 0;
+}
+
+.video-container a video {
+    flex: 1;
+}
+
+.video-container a video:not(:last-child) {
+    margin-right: 1em;
+}
+
+/* Footer Elements */
+
+#social-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#social-list ul li {
+    margin: .50em;
+}
+
+.social-icon img {
+    width: 2.5em;
+    height: auto;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.social-icon img:hover {
+    opacity: 0.6;
+    transition: transform 125ms;
+    transform: translateY(-10px);
+}
+
+footer {
+    animation: transitionIn 3s;
+    text-align: center;
+    font-size: 14px;
+    margin: 2em 2em;
+}
+
+/* Portfolio */
+
+.portfolio-content a video{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.portfolio-piece {
+    
+    padding-bottom: .5em;
+}
+
+/* Blog */
+
+#show-less {
+    display: none;
+}
+
+#blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-preview {
+    display: none;
+    border: 2px solid #000;
+    background-color: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+    cursor: pointer;
+    width: 15em;
+    height: 15em;
+    margin-top: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-preview p, .post-preview h5 {
+    color: white;
+}
+
+.post-preview.show {
+    height: auto;
+}
+
+.post-preview:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    transform: scale(0.98);
+}
+
+.post.show {
+    height: auto;
+}
+
+.post-content {
+    padding: 0.75em;
+}
+
+.post-desc {
+    font-size: 0.80em;
+}
+
+.post-title h5 {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.post-desc p {
+    height: 1em;
+    margin-top: 0px;
+}
+
+.post-desc p:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* Blog Post Window */
+
+.window {
+    user-select: none;
+    position: absolute;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 6px;
+    width: 500px;
+    height: 700px;
+    overflow: hidden;
+    resize: both;
+}
+
+.window .titlebar {
+    height: 4em;
+    cursor: move;
+    z-index: 10;
+    color: #000;
+    width: 100%;
+    position: absolute;
+    cursor: move;
+}
+
+.window .titlebar .close {
+    float: right;
+    cursor: pointer;
+    padding: .40em;
+    padding-right: .75em;
+}
+
+.window .content {
+    width: 100%;
+    height: calc(100% - 40px);
+    border: none;
+}
+
+.resizer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    cursor: nwse-resize;
+    z-index: 100;
+}
+
+/* Keyframes */
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(20em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes TopTransitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@import "/css/styles.css";
+@import url("/css/styles.css");
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+    /* Navigation Elements */
+
+    .nav-list ol li:nth-child(1) {
+        animation: TopTransitionIn 1s;
+    }
+    
+    .nav-list ol li:nth-child(2) {
+        animation: TopTransitionIn 1.5s;
+    }
+    
+    .nav-list ol li:nth-child(3) {
+        animation: TopTransitionIn 2s;
+    }
+    
+    .nav-list ol li:nth-child(4) {
+        animation: TopTransitionIn 2.5s;
+    }
+    
+    .nav-list ol li:nth-child(5) {
+        animation: TopTransitionIn 3s;
+    }
+
+    /* Blog Elements */
+    
+    .post-preview:nth-child(1),
+    .post-preview:nth-child(2),
+    .post-preview:nth-child(3) {
+        display: inline-block;
+    }
+    
+    .post-preview:nth-child(1),
+    .post-preview:nth-child(4) {
+        margin-left: 0;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Body Elements */
+
+    section {
+        margin: 0 2%;
+    }
+
+    /* Button Elements */
+
+    .btn-mobile-only {
+        display: inline-block;
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    /* Scrollbar Elements */
+
+    body::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    body::-webkit-scrollbar-track {
+        display: none;    
+    }
+
+    /* Header Elements */
+
+    .header {
+        position: relative;
+        padding: 2em 2em;
+    }
+
+    #logo img {
+        width: 2em;
+    }
+
+    /* Body Elements */
+
+    main {
+        margin-top: 0;
+    }
+
+    section {
+        margin: 0 4%;
+    }
+        
+    section h1 {
+        font-size: 2em;
+    }
+
+    /* Blog Elements */
+
+    .blog-posts-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 50%;
+    }
+
+    .post-preview {
+        width: 49%;
+    }
+
+    /* Button Elements */
+
+    .btn-mobile-only {
+        display: inline-block;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    /* Scrollbar Elements */
+
+    body::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    body::-webkit-scrollbar-track {
+        display: none;    
+    }
+
+    /* Header Elements */
+
+    .header {
+        position: relative;
+        padding: 2em 2em;
+    }
+
+    #logo img {
+        width: 2em;
+    }
+
+    /* Navigation Elements */
+
+    .nav-list {
+        display: none;
+    }
+
+    /* Blog Elements */
+    
+    .blog-posts-container {
+        display: block;
+    }
+
+    .post-preview {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+
+    .window {
+        width: 300px;
+        height: 500px;
+    }
+
+    /* Body Elements*/
+
+    main {
+        margin-top: 0;
+    }
+
+    section {
+        margin: 0 2em;
+    }
+
+    .introh1 {
+        font-size: 2.5em;
+    }
+
+    /* Button Elements */
+
+    .btn-mobile-only {
+        display: inline-block;
+    }
+
+
+}
+
+/* Portrait */
+
+@media screen and (orientation:portrait) {
+
+}
+
+/* Landscape */
+@media screen and (orientation:landscape) {
+    
+}
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+} 
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+
+}
