@@ -13,6 +13,7 @@ function Main() {
       <About/>
       <Portfolio/>
       <Resume/>
+      <Contact/>
     </div>
   );
 }

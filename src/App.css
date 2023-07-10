@@ -377,6 +377,59 @@ footer {
     z-index: 100;
 }
 
+/* Resume */
+.resume-container {
+    display: flex;
+    justify-content: center;
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+.work-experience,
+.education,
+.skills {
+    flex-basis: 50%;
+}
+
+.work-experience h2,
+.education h2,
+.skills h2 {
+    margin-top: 0;
+}
+
+.work-experience h3,
+.education h3 {
+    margin-bottom: 0;
+}
+
+.work-experience h4,
+.education h4 {
+    margin-top: 0.5rem;
+}
+
+.work-experience ul,
+.education p,
+.skills ul {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.skills li {
+    flex-basis: 50%;
+}  
+
 /* Keyframes */
 
 @keyframes FadeIn {
@@ -412,9 +465,6 @@ footer {
         transform: translateY(0);
     }
 }
-
-@import "/css/styles.css";
-@import url("/css/styles.css");
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
 
@@ -620,25 +670,5 @@ footer {
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
-
-}
-
-/* iPhone Portrait */
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-
-} 
-
-/* iPhone Landscape */
-@media screen and (max-device-width: 480px) and (orientation:landscape) {
-
-}
-
-/* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
-
-}
-
-/* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
 
 }
